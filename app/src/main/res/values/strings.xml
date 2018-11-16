@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Handmade Vertical Prototype</string>
+    <string name="app_name">Artisans</string>
+    <string name="artisan_image">artisan image</string>
+    <string name="artisan_profile_image">Artisan Profile Image</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="e_mail">E-Mail</string>
 </resources>
