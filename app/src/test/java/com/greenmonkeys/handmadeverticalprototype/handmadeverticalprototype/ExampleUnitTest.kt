@@ -1,4 +1,4 @@
-package com.example.jtorres.handmadeverticalprototype
+package com.greenmonkeys.handmadeverticalprototype.handmadeverticalprototype
 
 import org.junit.Test
 
