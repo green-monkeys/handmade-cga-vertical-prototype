@@ -9,6 +9,8 @@ import android.widget.TextView
 import com.example.jtorres.handmadeverticalprototype.R
 import com.greenmonkeys.verticalprototype.model.Artisan
 import com.greenmonkeys.verticalprototype.model.ArtisanContainer
+import com.greenmonkeys.verticalprototype.model.persistence.DatabaseContainer
+import org.jetbrains.anko.doAsync
 
 class CreateArtisanActivity : AppCompatActivity() {
 
@@ -25,14 +27,12 @@ class CreateArtisanActivity : AppCompatActivity() {
         val saveArtisanButton = findViewById<FloatingActionButton>(R.id.save_artisan_button)
         saveArtisanButton.setOnClickListener {
             if (firstNameField.text != null && lastNameField.text != null && emailField.text != null) {
-                ArtisanContainer.addArtisan(
-                    Artisan(
-                        firstNameField.text.toString(),
-                        lastNameField.text.toString(),
-                        emailField.text.toString()
-                    )
-                )
+                val artisan = Artisan(firstNameField.text.toString(), lastNameField.text.toString(), emailField.text.toString())
+                ArtisanContainer.addArtisan(artisan)
 
+                doAsync {
+                    DatabaseContainer.getDatabase(applicationContext).artisanDao().insert(artisan.toDataClass())
+                }
                 startActivity(Intent(this, MainActivity::class.java))
             }
         }
