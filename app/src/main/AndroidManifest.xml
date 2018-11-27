@@ -11,17 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.greenmonkeys.verticalprototype.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateArtisanActivity" >
+        <activity android:name="com.greenmonkeys.verticalprototype.CreateArtisanActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.jtorres.handmadeverticalprototype.MainActivity" />
+                android:value="com.example.jtorres.handmadeverticalprototype.com.greenmonkeys.verticalprototype.MainActivity" />
         </activity>
     </application>
 

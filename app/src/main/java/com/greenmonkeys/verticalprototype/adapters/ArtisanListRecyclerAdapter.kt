@@ -1,20 +1,24 @@
-package com.example.jtorres.handmadeverticalprototype
+package com.greenmonkeys.verticalprototype.adapters
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.example.jtorres.handmadeverticalprototype.R
+import com.greenmonkeys.verticalprototype.model.Artisan
 
 class ArtisanListRecyclerAdapter(private val values: List<Artisan>): RecyclerView.Adapter<ArtisanListRecyclerAdapter.ViewHolder>() {
     override fun getItemCount() = values.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.artisan_recycler_item_view, parent, false)
-        return ViewHolder(itemView)
+        return ViewHolder(
+            itemView
+        )
     }
 
-    override fun onBindViewHolder(holder: ArtisanListRecyclerAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.textView?.text = values[position].toString()
     }
 

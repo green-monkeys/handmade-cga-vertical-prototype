@@ -1,4 +1,4 @@
-package com.example.jtorres.handmadeverticalprototype
+package com.greenmonkeys.verticalprototype
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.view.MenuItem
 import android.widget.TextView
+import com.example.jtorres.handmadeverticalprototype.R
+import com.greenmonkeys.verticalprototype.model.Artisan
+import com.greenmonkeys.verticalprototype.model.ArtisanContainer
 
 class CreateArtisanActivity : AppCompatActivity() {
 
