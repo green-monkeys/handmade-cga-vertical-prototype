@@ -4,7 +4,7 @@ import android.arch.persistence.room.Room
 import android.content.Context
 
 object DatabaseContainer {
-    var db: AppDatabase? = null
+    private var db: AppDatabase? = null
 
     fun getDatabase(applicationContext: Context): AppDatabase {
         if (db == null) {

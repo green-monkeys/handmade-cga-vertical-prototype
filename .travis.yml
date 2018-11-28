@@ -1,0 +1,18 @@
+language: android
+android:
+  components:
+    - tools
+    - platform-tools
+    - tools
+    - build-tools-26.0.2
+    - android-26
+    - extra
+
+before_script:
+  - echo no | android create avd --force -n test -t android-26
+  - emulator -avd test -no-skin -no-audio -no-window &
+  - android-wait-for-emnulator
+  - adb shell input keyevent 82 &
+
+script:
+  - ./gradlew test

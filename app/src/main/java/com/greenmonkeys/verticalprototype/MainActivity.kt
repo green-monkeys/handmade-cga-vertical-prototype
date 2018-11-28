@@ -26,23 +26,17 @@ class MainActivity : AppCompatActivity() {
         artisanListRecycler.layoutManager = LinearLayoutManager(this)
         doAsync {
             val artisanList =
-                DatabaseContainer.getDatabase(applicationContext).artisanDao()
-                    .getAll().map { it.toModel() }
+                DatabaseContainer.getDatabase(applicationContext).artisanDao().getAll().map { it.toModel() }
 
             uiThread {
-                artisanListRecycler.adapter =
-                        ArtisanListRecyclerAdapter(artisanList)
+                artisanListRecycler.adapter = ArtisanListRecyclerAdapter(artisanList)
             }
         }
 
-        val addArtisanButton =
-            findViewById<FloatingActionButton>(R.id.addArtisan)
+        val addArtisanButton = findViewById<FloatingActionButton>(R.id.addArtisan)
         addArtisanButton.setOnClickListener {
             startActivity(
-                Intent(
-                    this,
-                    CreateArtisanActivity::class.java
-                )
+                Intent(this,CreateArtisanActivity::class.java)
             )
         }
     }
