@@ -6,5 +6,8 @@ android:
     - platform-tools
     - android-26
 
+before_script:
+  - yes | sudo sdkmanager --licenses
+
 script:
   - ./gradlew test
