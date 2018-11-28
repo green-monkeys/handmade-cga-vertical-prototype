@@ -2,12 +2,9 @@ language: android
 android:
   components:
     - tools
-    - build-tools-26.0.2
+    - build-tools-28.0.3
     - platform-tools
-    - android-26
-
-before_script:
-  - yes | sudo sdkmanager --licenses
+    - android-28
 
 script:
   - ./gradlew test
