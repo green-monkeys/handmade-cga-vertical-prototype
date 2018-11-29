@@ -13,23 +13,16 @@ class ArtisanTest {
         assertEquals( "John Doe", artisan.toString())
     }
 
-    var tempContainer = ArtisanContainer
     var artisan1 = Artisan("Edward","Lam","eddieSpam@email.com")
     var artisan2 = Artisan("Blue","Steel","zooMan@email.com")
     var artisan3 = Artisan("Grey","Fox","jaeger@email.com")
 
-    @Test
-    fun addSingleArtisan() {
-        tempContainer.addArtisan(artisan1)
-        assertTrue(tempContainer.artisans.contains(artisan1))
-    }
 
     @Test
-    fun addArtisan() {
-        tempContainer.addArtisan(artisan2)
-        assertTrue(tempContainer.artisans.contains(artisan2))
-        tempContainer.addArtisan(artisan3)
-        assertTrue(tempContainer.artisans.contains(artisan3))
+    fun testToString() {
+        assertTrue(artisan1.toString().equals("Edward Lam"))
+        assertTrue(artisan2.toString().equals("Blue Steel"))
+        assertTrue(artisan3.toString().equals("Grey Fox"))
     }
-    
+
 }
