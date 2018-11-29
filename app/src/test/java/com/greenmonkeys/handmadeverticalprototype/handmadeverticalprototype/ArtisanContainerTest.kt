@@ -24,4 +24,20 @@ class ArtisanContainerTest {
         tempContainer.addArtisan(artisan3)
         Assert.assertTrue(tempContainer.artisans.contains(artisan3))
     }
+
+    @Test
+    fun testArtisanData() {
+        val container = ArtisanContainer
+        container.addArtisan(Artisan("Melanie", "Grindelwald", "mgrin@example.org"))
+        Assert.assertFalse(container.artisans.isEmpty())
+    }
+
+    @Test
+    fun testArtisanData2() {
+        val container = ArtisanContainer
+        val numArtisans = container.artisans.size
+        container.addArtisan(Artisan("Mason", "Lundt", "mlund@email.com"))
+        container.artisans.removeAt(0)
+        Assert.assertEquals(container.artisans.size, numArtisans)
+    }
 }

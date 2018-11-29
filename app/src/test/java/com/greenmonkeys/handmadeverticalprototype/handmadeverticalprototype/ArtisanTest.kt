@@ -13,6 +13,26 @@ class ArtisanTest {
         assertEquals( "John Doe", artisan.toString())
     }
 
+    @Test
+    fun artisanConstructorTest2() {
+        val artisan = Artisan("Joe", "Schmoe", "jschmoe@mail.com")
+        assertEquals("Joe Schmoe", artisan.toString())
+    }
+
+    @Test
+    fun artisanDataClassTest() {
+        val artisan = Artisan("First", "Last", "email@mail.com")
+        assertEquals("First", artisan.toDataClass().firstName)
+        assertEquals("Last", artisan.toDataClass().lastName)
+        assertEquals("email@mail.com", artisan.toDataClass().email)
+    }
+
+    @Test
+    fun atisanDataClassTest2() {
+        val artisan = Artisan("Nancy", "Turntable", "email@mail.com")
+        assertEquals(artisan.toDataClass().toModel().toString(), "Nancy Turntable")
+    }
+
     var artisan1 = Artisan("Edward","Lam","eddieSpam@email.com")
     var artisan2 = Artisan("Blue","Steel","zooMan@email.com")
     var artisan3 = Artisan("Grey","Fox","jaeger@email.com")
