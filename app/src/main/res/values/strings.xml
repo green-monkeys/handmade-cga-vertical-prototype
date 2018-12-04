@@ -1,8 +1,15 @@
 <resources>
     <string name="app_name">Artisans</string>
-    <string name="artisan_image">artisan image</string>
+    <string name="artisan_image">pArtisan image</string>
     <string name="artisan_profile_image">Artisan Profile Image</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="e_mail">E-Mail</string>
+    <string name="e_mail_optional">E-mail (Optional)</string>
+    <string name="phone_number_optional">Phone Number (Optional)</string>
+    <string name="address_line_1_optional">Address Line 1 (Optional)</string>
+    <string name="address_line_2_optional">Address Line 2 (Optional)</string>
+    <string name="city_town_optional">City/Town (Optional)</string>
+    <string name="zip_postal_code_optional">Zip/Postal Code (Optional)</string>
+    <string name="country_optional">Country (Optional)</string>
 </resources>

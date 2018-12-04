@@ -7,18 +7,18 @@ import android.arch.persistence.room.Query
 
 @Dao
 interface ArtisanDao {
-    @Query("SELECT * FROM Artisan")
-    fun getAll(): List<Artisan>
+    @Query("SELECT * FROM PArtisan")
+    fun getAll(): List<PArtisan>
 
-    @Query("SELECT * FROM Artisan WHERE email LIKE :email")
-    fun findByEmail(email: String): Artisan
-
-    @Insert
-    fun insert(artisan: Artisan)
+    @Query("SELECT * FROM PArtisan WHERE email LIKE :email")
+    fun findByEmail(email: String): PArtisan
 
     @Insert
-    fun insertAll(artisans: List<Artisan>)
+    fun insert(pArtisan: PArtisan)
+
+    @Insert
+    fun insertAll(pArtisans: List<PArtisan>)
 
     @Delete
-    fun delete(artisan: Artisan)
+    fun delete(pArtisan: PArtisan)
 }
